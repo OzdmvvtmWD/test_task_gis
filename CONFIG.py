@@ -3,7 +3,7 @@ import os
 
 BASE_DIR = os.path.abspath(os.getcwd())
 
-CSV_FILENAME = "processed_data"
+CSV_FILENAME = "processed_data.csv"
 CSV_PATH = os.path.join(BASE_DIR, "exports", CSV_FILENAME)
 
 CREDENTIALS_DIR = os.path.join(BASE_DIR, "credentials")
@@ -11,7 +11,7 @@ EXPORTS_DIR = os.path.join(BASE_DIR, "exports")
 
 PORTAL_URL = "https://www.arcgis.com"
 
-TEST_ITEM_ID = "f838627501514672b00314f9148974a5"
+TEST_ITEM_ID = "61da4ed4a1b040929a705873b44166f6"
 
 WORK_FOLDER_NAME = "Test"
 

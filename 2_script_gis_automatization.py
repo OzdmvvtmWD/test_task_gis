@@ -20,6 +20,7 @@ gis_custom.ensure_folder(WORK_FOLDER_NAME)
 test_item_copy = gis_custom.clone_item_to_folder(TEST_ITEM_ID, WORK_FOLDER_NAME)
 test_layer_copy  = test_item_copy.layers[0]
 
+print(test_item_copy.id)
 gis_custom.get_layer_fields(test_layer_copy)
 
 gis_custom.delete_all_features(test_layer_copy)

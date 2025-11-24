@@ -138,9 +138,13 @@ class GISDriver:
     # def delete_feature(self, layer):
 
     def delete_all_features(self, layer):
-        all_features = layer.query(where="1=1").features
-        all_object_ids = [str(f.attributes['OBJECTID']) for f in all_features]
-        delete_string = ",".join(all_object_ids)
+        try:
+            all_features = layer.query(where="1=1").features
+            all_object_ids = [str(f.attributes['OBJECTID']) for f in all_features]
+            delete_string = ",".join(all_object_ids)
 
-        delete_result = layer.edit_features(deletes=delete_string)
-        print(delete_result)
+            delete_result = layer.edit_features(deletes=delete_string)
+            print(delete_result)
+
+        except Exception as e:
+            print("Nothing to delete")
